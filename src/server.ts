@@ -1,6 +1,6 @@
 import express, { json } from "express";
 
-import { categoriesRoutes } from "./routes";
+import { CategoriesRoutes } from "./routes";
 
 const app = express();
 
@@ -8,6 +8,6 @@ const app = express();
 app.use(json());
 
 // Rotas
-app.use("/categories", categoriesRoutes);
+app.use("/categories", CategoriesRoutes);
 
 app.listen(3333, () => console.log("Server is running on port 3333! 🚀"));

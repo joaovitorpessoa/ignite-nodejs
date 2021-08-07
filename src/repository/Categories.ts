@@ -19,6 +19,14 @@ class Categories {
   list(): CategoryModel[] {
     return this.categories;
   }
+
+  findByName(name: string): CategoryModel | void {
+    const category = this.categories.find((category) => category.name === name);
+
+    if (category) {
+      return category;
+    }
+  }
 }
 
 export default Categories;
