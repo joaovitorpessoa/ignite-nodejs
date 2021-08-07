@@ -1,5 +1,13 @@
-import express from "express";
+import express, { json } from "express";
+
+import { categoriesRoutes } from "./routes";
 
 const app = express();
 
-app.listen(3333, () => console.log("Server is running! 🚀"));
+// Middlewares de dependência
+app.use(json());
+
+// Rotas
+app.use("/categories", categoriesRoutes);
+
+app.listen(3333, () => console.log("Server is running on port 3333! 🚀"));
