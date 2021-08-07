@@ -1,0 +1,20 @@
+{
+  "name": "ignite-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/joaovitorpessoa/ignite-nodejs.git",
+  "author": "João Vitor Pessoa <joaovitorpessoa81@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "debug": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
