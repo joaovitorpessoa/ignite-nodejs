@@ -1,1 +1,1 @@
-export { default as CategoriesRoutes } from "./Categories";
+export { routes as CategoriesRoutes } from "./Categories";

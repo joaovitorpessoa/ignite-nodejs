@@ -1,11 +1,7 @@
 import { CategoryModel } from "../model";
+import { ICategoriesRepository, ICreateCategoryDTO } from "../repository";
 
-interface ICreateCategoryDTO {
-  name: string;
-  description: string;
-}
-
-class Categories {
+class Categories implements ICategoriesRepository {
   private categories: CategoryModel[] = [];
 
   create({ name, description }: ICreateCategoryDTO): void {
@@ -29,4 +25,4 @@ class Categories {
   }
 }
 
-export default Categories;
+export { Categories };

@@ -1,1 +1,1 @@
-export { default as CategoryModel } from "./Category";
+export { Category as CategoryModel } from "./Category";
