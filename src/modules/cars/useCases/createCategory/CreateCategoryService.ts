@@ -1,11 +1,11 @@
-import { ICategoriesRepository } from "../repositories";
+import { ICategoriesRepository } from "../../repositories";
 
 interface IRequest {
   name: string;
   description: string;
 }
 
-class CreateCategory {
+class CreateCategoryService {
   // Em vez de criar uma propriedade privada pra classe e depois
   // atribuir o parâmetro do construtor a ela, basta utilizar a trick abaixo:
   constructor(private categoriesRepository: ICategoriesRepository) {}
@@ -21,4 +21,4 @@ class CreateCategory {
   }
 }
 
-export { CreateCategory };
+export { CreateCategoryService };
