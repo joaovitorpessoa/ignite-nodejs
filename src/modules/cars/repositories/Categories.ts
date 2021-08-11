@@ -1,5 +1,5 @@
 import { CategoryModel } from "../model";
-import { ICategoriesRepository, ICreateCategoryDTO } from ".";
+import { ICategoriesRepository, ICreateCategoryDTO } from "../repositories";
 
 class Categories implements ICategoriesRepository {
   private categories: CategoryModel[] = [];
@@ -8,8 +8,6 @@ class Categories implements ICategoriesRepository {
     const categoryModel = new CategoryModel({ name, description });
 
     this.categories.push(categoryModel);
-
-    console.log(this.categories);
   }
 
   list(): CategoryModel[] {

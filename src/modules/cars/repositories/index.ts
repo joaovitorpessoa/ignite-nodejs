@@ -3,4 +3,9 @@ export {
   ICategories as ICategoriesRepository,
   ICreateCategoryDTO,
 } from "./ICategories";
-export { PostgresCategories as PostgresCategoriesRepository } from "./PostgresCategories";
+
+export { Specifications as SpecificationsRepository } from "./Specifications";
+export {
+  ISpecifications as ISpecificationsRepository,
+  ICreateSpecificationDTO,
+} from "./ISpecifications";
