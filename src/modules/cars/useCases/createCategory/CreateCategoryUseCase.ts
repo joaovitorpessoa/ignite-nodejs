@@ -5,7 +5,7 @@ interface IRequest {
   description: string;
 }
 
-class CreateCategoryService {
+class CreateCategoryUseCase {
   // Em vez de criar uma propriedade privada pra classe e depois
   // atribuir o parâmetro do construtor a ela, basta utilizar a trick abaixo:
   constructor(private categoriesRepository: ICategoriesRepository) {}
@@ -21,4 +21,4 @@ class CreateCategoryService {
   }
 }
 
-export { CreateCategoryService };
+export { CreateCategoryUseCase };

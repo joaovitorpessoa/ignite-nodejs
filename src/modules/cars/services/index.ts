@@ -1,1 +1,1 @@
-export { CreateSpecification as CreateSpecificationService } from "./CreateSpecification";
+export { CreateSpecificationService } from "./CreateSpecificationService";

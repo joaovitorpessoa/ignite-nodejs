@@ -1,3 +1,3 @@
-export { Category as CategoryModel } from "./Category";
+export { Category } from "./Category";
 
-export { Specification as SpecificationModel } from "./Specification";
+export { Specification } from "./Specification";
