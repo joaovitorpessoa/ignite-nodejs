@@ -6,8 +6,6 @@ interface IRequest {
 }
 
 class CreateCategoryUseCase {
-  // Em vez de criar uma propriedade privada pra classe e depois
-  // atribuir o parâmetro do construtor a ela, basta utilizar a trick abaixo:
   constructor(private categoriesRepository: ICategoriesRepository) {}
 
   execute({ name, description }: IRequest): void {
