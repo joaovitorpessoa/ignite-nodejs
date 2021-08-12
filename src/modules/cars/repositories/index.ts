@@ -1,10 +1,10 @@
-export { CategoriesRepository } from "./CategoriesRepository";
+export { CategoriesRepository } from "./implementations/CategoriesRepository";
 export {
   ICategoriesRepository,
   ICreateCategoryDTO,
 } from "./ICategoriesRepository";
 
-export { SpecificationsRepository } from "./SpecificationsRepository";
+export { SpecificationsRepository } from "./implementations/SpecificationsRepository";
 export {
   ISpecificationsRepository,
   ICreateSpecificationDTO,
