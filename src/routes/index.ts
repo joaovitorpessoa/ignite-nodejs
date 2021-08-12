@@ -1,3 +1,11 @@
-export { routes as CategoriesRoutes } from "./Categories";
+import { Router } from "express";
 
-export { routes as SpecificationsRoutes } from "./Specifications";
+import { CategoriesRoutes } from "./categories.routes";
+import { SpecificationsRoutes } from "./specifications.routes";
+
+const routes = Router();
+
+routes.use("/categories", CategoriesRoutes);
+routes.use("/specifications", SpecificationsRoutes);
+
+export { routes };

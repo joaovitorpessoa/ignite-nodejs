@@ -1,15 +1,10 @@
 import express, { json } from "express";
 
-import { CategoriesRoutes, SpecificationsRoutes } from "./routes";
+import { routes } from "./routes";
 
 const app = express();
 
-// Middlewares de dependência
 app.use(json());
-
-// Rotas
-app.use("/categories", CategoriesRoutes);
-
-app.use("/specifications", SpecificationsRoutes);
+app.use(routes);
 
 app.listen(3333, () => console.log("Server is running on port 3333! 🚀"));

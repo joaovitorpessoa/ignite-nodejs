@@ -3,14 +3,14 @@ import { Router } from "express";
 import { createCategoryController } from "../modules/cars/useCases/createCategory";
 import { listCategoriesController } from "../modules/cars/useCases/listCategories";
 
-const routes = Router();
+const CategoriesRoutes = Router();
 
-routes.post("/", (request, response) => {
+CategoriesRoutes.post("/", (request, response) => {
   return createCategoryController.handle(request, response);
 });
 
-routes.get("/", (request, response) => {
+CategoriesRoutes.get("/", (request, response) => {
   return listCategoriesController.handle(request, response);
 });
 
-export { routes };
+export { CategoriesRoutes };
