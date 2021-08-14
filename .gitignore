@@ -4,6 +4,7 @@ node_modules
 # Cache
 package-lock.json
 yarn.lock
+yarn-error.log
 
 # Arquivos temporários
 tmp/*
