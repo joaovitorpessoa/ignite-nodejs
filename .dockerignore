@@ -1,0 +1,19 @@
+# Dependências
+node_modules
+
+# Cache
+package-lock.json
+yarn.lock
+yarn-error.log
+
+# Arquivos temporários
+tmp/*
+
+# Desenvolvimento
+.vscode
+.vscode/*
+.git
+
+# Documentação
+docs
+README.md
