@@ -4,6 +4,7 @@ import { Router } from "express";
 
 import { createCategoryController } from "../modules/cars/useCases/createCategory";
 import { listCategoriesController } from "../modules/cars/useCases/listCategories";
+import { importFileController } from "../modules/cars/useCases/importFile";
 
 const CategoriesRoutes = Router();
 const upload = multer({
@@ -19,11 +20,7 @@ CategoriesRoutes.get("/", (request, response) => {
 });
 
 CategoriesRoutes.post("/import", upload.single("file"), (request, response) => {
-  const { file } = request;
-
-  console.log(file);
-
-  return response.send();
+  return importFileController.handle(request, response);
 });
 
 export { CategoriesRoutes };
