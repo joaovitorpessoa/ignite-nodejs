@@ -8,3 +8,7 @@ yarn.lock
 # Arquivos temporários
 tmp/*
 !tmp/example.csv
+
+# Pessoal
+.vscode
+.vscode/*
