@@ -29,7 +29,10 @@ class ImportFileUseCase {
             description,
           });
         }) // As duas funções abaixo só são chamadas no fim do stream de dados
-        .on("end", () => resolve(categories))
+        .on("end", () => {
+          resolve(categories);
+          fs.promises.unlink(file.path);
+        })
         .on("error", (error) => reject(error));
     });
   }
