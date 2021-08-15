@@ -1,3 +1,5 @@
+import "reflect-metadata";
+import "./database";
 import express, { json } from "express";
 import swagger from "swagger-ui-express";
 import swaggerConfig from "./swagger.json";
