@@ -15,5 +15,5 @@ tmp/*
 .git
 
 # Documentação
-docs
+/docs
 README.md
