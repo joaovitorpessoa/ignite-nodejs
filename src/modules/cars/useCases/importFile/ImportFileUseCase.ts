@@ -1,7 +1,7 @@
 import fs from "fs";
 import csvParse from "csv-parse";
 
-import { createCategoryUseCase } from "../../useCases/createCategory";
+// import { createCategoryUseCase } from "../../useCases/createCategory";
 
 interface ICategoryImport {
   name: string;
@@ -40,11 +40,11 @@ class ImportFileUseCase {
   async execute(file: Express.Multer.File): Promise<void> {
     const categories = await this.loadCategories(file);
 
-    categories.map((category) => {
-      const { name, description } = category;
+    // categories.map((category) => {
+    //   const { name, description } = category;
 
-      createCategoryUseCase.execute({ name, description });
-    });
+    //   createCategoryUseCase.execute({ name, description });
+    // });
   }
 }
 
