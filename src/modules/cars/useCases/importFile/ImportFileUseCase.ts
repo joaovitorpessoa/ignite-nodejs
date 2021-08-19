@@ -1,16 +1,16 @@
 import fs from "fs";
 import csvParse from "csv-parse";
+import { container, injectable } from "tsyringe";
 
-// import { createCategoryUseCase } from "../../useCases/createCategory";
+import { CreateCategoryUseCase } from "../../useCases/createCategory";
 
 interface ICategoryImport {
   name: string;
   description: string;
 }
 
+@injectable()
 class ImportFileUseCase {
-  constructor() {}
-
   loadCategories(file: Express.Multer.File): Promise<ICategoryImport[]> {
     const categories: ICategoryImport[] = [];
 
@@ -40,11 +40,13 @@ class ImportFileUseCase {
   async execute(file: Express.Multer.File): Promise<void> {
     const categories = await this.loadCategories(file);
 
-    // categories.map((category) => {
-    //   const { name, description } = category;
+    categories.map(async (category) => {
+      const { name, description } = category;
 
-    //   createCategoryUseCase.execute({ name, description });
-    // });
+      const createCategoryUseCase = container.resolve(CreateCategoryUseCase);
+
+      await createCategoryUseCase.execute({ name, description });
+    });
   }
 }
 

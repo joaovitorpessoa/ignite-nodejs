@@ -1,7 +1,12 @@
+import { inject, injectable } from "tsyringe";
 import { ISpecificationsRepository } from "../../repositories";
 
+@injectable()
 class ListSpecificationUseCase {
-  constructor(private specificationsRepository: ISpecificationsRepository) {}
+  constructor(
+    @inject("SpecificationsRepository")
+    private specificationsRepository: ISpecificationsRepository
+  ) {}
 
   execute() {
     const allSpecifications = this.specificationsRepository.list();

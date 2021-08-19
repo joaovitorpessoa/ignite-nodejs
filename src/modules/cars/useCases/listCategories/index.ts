@@ -1,11 +1,2 @@
-import { ListCategoriesController } from "./ListCategoriesController";
-import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
-import { CategoriesRepository } from "../../repositories";
-
-const categoriesRepository = null;
-const listCategoriesUseCase = new ListCategoriesUseCase(categoriesRepository);
-const listCategoriesController = new ListCategoriesController(
-  listCategoriesUseCase
-);
-
-export { listCategoriesController };
+export { ListCategoriesController } from "./ListCategoriesController";
+export { ListCategoriesUseCase } from "./ListCategoriesUseCase";
