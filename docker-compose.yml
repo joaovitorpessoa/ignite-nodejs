@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  database_app:
+  database:
     image: postgres
     container_name: database_rentx
     restart: always
@@ -22,9 +22,9 @@ services:
     volumes:
       - .:/usr/app/rentx
     links:
-      - database_app
+      - database
     depends_on:
-      - database_app
+      - database
 
 volumes:
   pgdata:
