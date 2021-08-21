@@ -4,7 +4,7 @@ import { v4 as uuid } from "uuid";
 @Entity("users")
 class User {
   @PrimaryColumn()
-  private id: string;
+  id: string;
 
   @Column()
   name: string;
@@ -22,7 +22,7 @@ class User {
   isAdmin: boolean;
 
   @CreateDateColumn()
-  private created_at: Date;
+  created_at: Date;
 
   constructor() {
     if (!this.id) {
