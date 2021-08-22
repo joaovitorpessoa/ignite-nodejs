@@ -1,6 +1,5 @@
-import multer from "multer";
-
 import { Router } from "express";
+import multer from "multer";
 
 import { CreateCategoryController } from "../modules/cars/useCases/createCategory";
 import { ListCategoriesController } from "../modules/cars/useCases/listCategories";

@@ -1,6 +1,7 @@
 import { inject, injectable } from "tsyringe";
-import { IUsersRepository } from "../../repositories";
 import { hash } from "bcrypt";
+
+import { IUsersRepository } from "../../repositories";
 import { AppError } from "../../../../errors";
 
 interface IRequest {
