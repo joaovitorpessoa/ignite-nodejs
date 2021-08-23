@@ -34,6 +34,10 @@ class UsersRepository implements IUsersRepository {
 
     return user;
   }
+
+  async update(entitieUpdated: User): Promise<void> {
+    await this.usersRepository.save(entitieUpdated);
+  }
 }
 
 export { UsersRepository };
