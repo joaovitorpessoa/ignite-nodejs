@@ -8,7 +8,6 @@ yarn-error.log
 
 # Arquivos temporários
 tmp/*
-!tmp/example.csv
 
 # Pessoal
 .vscode
