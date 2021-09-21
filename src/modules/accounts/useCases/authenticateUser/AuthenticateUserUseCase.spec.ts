@@ -37,7 +37,7 @@ describe("Authenticate user", () => {
     expect(authenticate).toHaveProperty("token");
   });
 
-  it("Should be not able to authenticate a user that not exists", async () => {
+  it("Should not be able to authenticate a user that not exists", async () => {
     expect(async () => {
       await authenticateUserUseCase.execute({
         email: "Email user that doesn't exists",
@@ -46,7 +46,7 @@ describe("Authenticate user", () => {
     }).rejects.toBeInstanceOf(AppError);
   });
 
-  it("Should be not able to authenticate a user with email incorrect", async () => {
+  it("Should not be able to authenticate a user with email incorrect", async () => {
     expect(async () => {
       await authenticateUserUseCase.execute({
         email: "Email user incorrect",
@@ -55,7 +55,7 @@ describe("Authenticate user", () => {
     }).rejects.toBeInstanceOf(AppError);
   });
 
-  it("Should be not able to authenticate a user with password incorrect", async () => {
+  it("Should not be able to authenticate a user with password incorrect", async () => {
     expect(async () => {
       await authenticateUserUseCase.execute({
         email: user.email,
