@@ -15,4 +15,12 @@ class AuthenticateUserController {
   }
 }
 
+function seraqTemAcessoAoThis1() {
+  return this.teste = "aaa";
+}
+
+const seraqTemAcessoAoThis2 = () => {
+  return this.teste = "bbb";
+}
+
 export { AuthenticateUserController };
